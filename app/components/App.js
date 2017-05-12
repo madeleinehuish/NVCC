@@ -19,12 +19,18 @@ class App extends Component {
 
 		this.videoSearch('javascript'); //sets an initial search term so something will be on screen
 		this.onSearchInputChange = this.onSearchInputChange.bind(this);
+		this.onVideoSelect = this.onVideoSelect.bind(this);
 	}
 
 	//handles the input in the search bar
 	onSearchInputChange(event) {
 		this.setState({ term: event.target.value });
 		this.videoSearch(event.target.value);
+	}
+
+	//clicking on side list of videos will change the selected video
+	onVideoSelect(video) {
+		this.setState({ selectedVideo: video});
 	}
 
 	//updates the video list with the current search term and calls youtube
@@ -52,7 +58,7 @@ class App extends Component {
 				</div>
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList
-					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+					onVideoSelect={this.onVideoSelect}
 					videos={this.state.videos} />
 			</div>
 		);
