@@ -18,6 +18,7 @@ const VideoDetail = (props) => {
 			<div className="details">
 				<div className="video-title">{video.snippet.title}</div>
 				<div>{video.snippet.description}</div>
+			<br />
 			</div>
 		</div>
 	);
