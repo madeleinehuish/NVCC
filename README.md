@@ -1,4 +1,4 @@
-# Nventi Video Coding Challenge
+# NVCC
 
 
 **About:**
