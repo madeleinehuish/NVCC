@@ -1,6 +1,5 @@
 # Nventi Video Coding Challenge
 
-----
 ###About
 >This is a small youtube video app built in React.js with a Brunch build and server.
 
