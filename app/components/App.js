@@ -28,8 +28,8 @@ class App extends Component {
 	}
 
 	//updates the video list with the current search term and calls youtube
-	videoSearch(term) {
-		YTSearch({key: API_KEY, term: term}, (videos) => {
+	videoSearch(searchterm) {
+		YTSearch({key: API_KEY, term: searchterm}, (videos) => {
 			this.setState({
 				videos: videos,
 				selectedVideo: videos[0]
@@ -42,7 +42,7 @@ class App extends Component {
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-offset-3 col-lg-6 col-lg-offset-3">
+					<div className="col-lg-offset-1 col-lg-6 col-lg-offset-5">
 		      	<h3 className="text-center">Nventi Video Coding Challenge</h3>
 						<SearchBar
 							onSearchInputChange={this.onSearchInputChange}
